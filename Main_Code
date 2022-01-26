@@ -59,7 +59,7 @@ for imgg in os.listdir(testing_dataset):
     print(pred_label)
     if pred_label == [0]:
         print('Its a car')
-        with open('Auto_HashTag_Detector.txt', 'w') as f:
+        with open('Auto_HashTag_Detector.txt', 'a') as f:
             f.write('The Hashtags are:\n')
             for ht in car:
                 f.write(ht)
@@ -99,3 +99,5 @@ for imgg in os.listdir(testing_dataset):
 
 
 #print('Confusion Matrix - \n', tf.math.confusion_matrix(labels=testing_dataset, predictions=pred))
+
+
